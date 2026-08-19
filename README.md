@@ -14,9 +14,9 @@
 
 이를 위해 ChatGPT 기반의 정기 브리핑 워크플로를 설계하고,
 
-**수집 → 검증 → 중복 제거 → 중요도 분류 → 마케터 관점 해석 → 콘텐츠 아이디어 전환**
+**수집 → 검증 → 중복 제거 → 중요도 분류 → 마케터 관점 해석 → 콘텐츠 아이디어 전환 → 주·월간 패턴 분석**
 
-과정을 날짜별로 기록하고 있습니다.
+과정을 지속적으로 기록하고 있습니다.
 
 ---
 
@@ -33,6 +33,9 @@
 
 - **AI 기반 업무 효율화**  
   AI에게 판단을 맡기는 것이 아니라 직접 설정한 수집 범위와 선별 기준을 바탕으로 반복적인 정보 탐색·정리 과정을 효율화합니다.
+
+- **단발성 뉴스가 아닌 변화의 패턴 발견**  
+  Daily Briefing을 Weekly Insight와 Monthly Report로 다시 분석해 반복되는 흐름과 구조적 변화를 찾습니다.
 
 ---
 
@@ -91,7 +94,11 @@ NEWSLETTERS · WEB · SOCIAL CHANNELS
                 ↓
        CONTENT APPLICATION IDEA
                 ↓
-             ARCHIVE
+         DAILY BRIEFING
+                ↓
+         WEEKLY INSIGHT
+                ↓
+         MONTHLY REPORT
 ```
 
 1. **Collect** — 새로운 뉴스레터·웹·공개 소셜 정보를 수집합니다.
@@ -100,7 +107,44 @@ NEWSLETTERS · WEB · SOCIAL CHANNELS
 4. **Prioritize** — 최신성과 콘텐츠 마케팅 영향도를 기준으로 중요도를 분류합니다.
 5. **Interpret** — 콘텐츠 마케터에게 어떤 의미가 있는지 해석합니다.
 6. **Apply** — 콘텐츠 기획·카피·SNS 운영·광고 등에 활용할 아이디어를 도출합니다.
-7. **Archive** — 날짜별 기록으로 축적합니다.
+7. **Archive** — 날짜별 Daily Briefing으로 축적합니다.
+8. **Connect** — Weekly Insight에서 반복 이슈와 변화의 방향을 연결합니다.
+9. **Synthesize** — Monthly Report에서 한 달의 핵심 변화와 실무 대응을 압축합니다.
+
+---
+
+## Insight Layers
+
+### 01. Daily Briefing — What happened?
+
+매일 새롭게 확인된 이슈를 원본 데이터처럼 기록합니다.
+
+- 핵심 이슈
+- 한 줄 요약
+- Why It Matters
+- Priority
+- Action Point
+- Portfolio / Content Idea
+- Sources
+- 검증·제외 로그
+
+### 02. Weekly Insight — What is changing?
+
+Daily Briefing을 다시 나열하지 않고 **한 주 동안 반복된 흐름과 서로 다른 이슈의 연결 관계**를 분석합니다.
+
+예:
+
+`AI 콘텐츠 증가 → 신뢰 문제 증가 → 사람의 경험·검수 중요성 상승`
+
+### 03. Monthly Report — What should a marketer change?
+
+한 달간 쌓인 Daily·Weekly 데이터를 바탕으로 **구조적 변화, 플랫폼 변화, 소비자 변화, 실무 액션**을 정리합니다.
+
+월간 리포트의 목표는 뉴스 TOP 10이 아니라,
+
+> **“그래서 다음 달 콘텐츠 마케터는 무엇을 다르게 해야 하는가?”**
+
+에 답하는 것입니다.
 
 ---
 
@@ -132,42 +176,41 @@ NEWSLETTERS · WEB · SOCIAL CHANNELS
 
 ---
 
-## Daily Briefing Format
-
-각 날짜별 브리핑에는 다음 내용을 기록합니다.
-
-- **오늘 꼭 볼 핵심 이슈**
-- **한 줄 요약**
-- **Why It Matters** — 콘텐츠 마케터에게 중요한 이유
-- **Priority** — 필독 / 주목 / 참고
-- **Action Point** — 실무 적용 방법
-- **Content Idea** — 포트폴리오·개인 SNS·콘텐츠 기획 활용 아이디어
-- **Sources** — 뉴스레터·웹·공개 채널 출처
-
----
-
 ## Repository Structure
 
 ```text
 ai-content-trend-radar/
 │
 ├── README.md
+│
 ├── 01_Daily-Briefing/
 │   └── 2026-08/
 │       ├── 2026-08-06.md
+│       ├── 2026-08-07.md
 │       └── ...
+│
 ├── 02_Weekly-Insight/
-├── 03_Trend-to-Content/
-└── 04_Methodology/
+│   ├── 2026-W32-Launch.md
+│   ├── 2026-W33.md
+│   └── ...
+│
+├── 03_Monthly-Report/
+│   ├── _TEMPLATE.md
+│   └── 2026-08.md
+│
+├── 04_Trend-to-Content/
+│
+└── 05_Methodology/
     ├── sources.md
     ├── workflow.md
     └── selection-criteria.md
 ```
 
 - **01_Daily-Briefing** — 날짜별 콘텐츠·마케팅·AI 트렌드 브리핑
-- **02_Weekly-Insight** — 한 주간 반복적으로 등장한 이슈와 주요 변화
-- **03_Trend-to-Content** — 발견한 트렌드를 실제 콘텐츠 아이디어로 발전시킨 기록
-- **04_Methodology** — 정보원·선별 기준·AI 활용 방식 등 프로젝트 운영 방법
+- **02_Weekly-Insight** — 한 주간 반복적으로 등장한 이슈와 변화 방향
+- **03_Monthly-Report** — 한 달의 핵심 Trend Shift와 콘텐츠 마케터 실무 액션
+- **04_Trend-to-Content** — 발견한 트렌드를 실제 콘텐츠 아이디어로 발전시킨 기록
+- **05_Methodology** — 정보원·선별 기준·AI 활용 방식 등 프로젝트 운영 방법
 
 ---
 
@@ -205,6 +248,7 @@ CONTENT
 - 중복 정보 정리 및 우선순위 판단
 - 플랫폼·알고리즘 변화 모니터링
 - 소비자 관심사 및 콘텐츠 트렌드 분석
+- 여러 이슈를 하나의 변화 흐름으로 연결하는 분석
 - 트렌드의 콘텐츠 아이디어 전환
 - 지속적인 자기주도 학습과 기록
 
@@ -215,6 +259,8 @@ CONTENT
 AI는 **정보 탐색과 정리를 효율화하는 보조 도구**로 활용합니다.
 
 정보 수집 범위와 중요도 기준을 직접 설정하고, 출처 확인·광고성 정보 제외·실무 활용 여부 판단을 거쳐 필요한 정보만 선별합니다.
+
+또한 Daily Briefing의 반복 정보를 Weekly·Monthly 단계에서 다시 연결해 패턴을 발견하되, 최종 해석과 콘텐츠 활용 방향은 콘텐츠 마케터 관점에서 검토합니다.
 
 > AI를 사용하는 것 자체보다  
 > **AI를 어떤 기준으로 활용하고 결과를 어떻게 실무에 연결하는가**를 중요하게 생각합니다.
@@ -240,7 +286,12 @@ AI는 **정보 탐색과 정리를 효율화하는 보조 도구**로 활용합�
 **Started:** August 2026  
 **Status:** Ongoing
 
-현재 날짜별 Daily Briefing을 축적하고 있으며, 데이터가 쌓이면 Weekly Insight와 Trend → Content 사례를 함께 기록할 예정입니다.
+현재 Daily Briefing을 자동으로 축적하고 있으며, Weekly Insight 분석을 시작했습니다. 월간 데이터가 완성되면 `03_Monthly-Report/2026-08.md`에 첫 August Monthly Report를 작성할 예정입니다.
+
+### Current Weekly Reports
+
+- [2026 W32 · Launch Week Insight](02_Weekly-Insight/2026-W32-Launch.md)
+- [2026 W33 · Weekly Insight](02_Weekly-Insight/2026-W33.md)
 
 ---
 
